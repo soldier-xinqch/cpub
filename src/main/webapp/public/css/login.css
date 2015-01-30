@@ -1,0 +1,5 @@
+@CHARSET "UTF-8";
+body{margin: 0;padding: 0;overflow: hidden;font-family: Arial;font-size: 12px;text-align: center;background-color: #5D6B88;}
+table{border-collapse:collapse;font-family: Arial;font-size: 12px;}
+.tab_login{width: 570px;height: 252px;background: url('../images/login/uup.jpg');margin-top: 12%}
+.but{border: 0;width: 66px;height: 27px;background: url('../images/login/denlu_normal.png');}
