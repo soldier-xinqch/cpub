@@ -1,0 +1,63 @@
+04-10 09:37:40 database: close
+org.h2.message.DbException: IO Exception: "java.io.SyncFailedException: sync failed"; "E:/javaspace/eclipse/CourtWorkspaces/cpub/oss_data/upgrade/db/cpub.h2.db" [90031-172]
+	at org.h2.message.DbException.get(DbException.java:158)
+	at org.h2.message.DbException.convertIOException(DbException.java:315)
+	at org.h2.store.FileStore.sync(FileStore.java:406)
+	at org.h2.store.PageStore.writeVariableHeader(PageStore.java:947)
+	at org.h2.store.PageStore.setLogFirstPage(PageStore.java:941)
+	at org.h2.store.PageLog.removeUntil(PageLog.java:705)
+	at org.h2.store.PageStore.checkpoint(PageStore.java:434)
+	at org.h2.engine.Database.closeOpenFilesAndUnlock(Database.java:1211)
+	at org.h2.engine.Database.close(Database.java:1164)
+	at org.h2.engine.Database.removeSession(Database.java:1043)
+	at org.h2.engine.Session.close(Session.java:617)
+	at org.h2.server.TcpServerThread.closeSession(TcpServerThread.java:177)
+	at org.h2.server.TcpServerThread.process(TcpServerThread.java:272)
+	at org.h2.server.TcpServerThread.run(TcpServerThread.java:151)
+	at java.lang.Thread.run(Thread.java:724)
+Caused by: org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.SyncFailedException: sync failed"; "E:/javaspace/eclipse/CourtWorkspaces/cpub/oss_data/upgrade/db/cpub.h2.db" [90031-172]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	... 15 more
+Caused by: java.io.SyncFailedException: sync failed
+	at java.io.FileDescriptor.sync(Native Method)
+	at org.h2.store.fs.FileDisk.force(FilePathDisk.java:406)
+	at org.h2.store.FileStore.sync(FileStore.java:403)
+	... 12 more
+06-28 16:09:00 pageStore: Transaction log could not be truncated; size: 16 MB
+07-04 13:36:00 pageStore: Transaction log could not be truncated; size: 16 MB
+07-10 12:21:00 pageStore: Transaction log could not be truncated; size: 16 MB
+07-12 15:12:00 pageStore: Transaction log could not be truncated; size: 16 MB
+07-19 12:18:00 pageStore: Transaction log could not be truncated; size: 16 MB
+07-23 16:00:00 pageStore: Transaction log could not be truncated; size: 16 MB
+07-26 16:27:00 pageStore: Transaction log could not be truncated; size: 16 MB
+07-29 20:54:00 pageStore: Transaction log could not be truncated; size: 16 MB
+08-05 08:21:00 pageStore: Transaction log could not be truncated; size: 16 MB
+08-08 11:15:00 pageStore: Transaction log could not be truncated; size: 16 MB
+08-12 17:48:00 pageStore: Transaction log could not be truncated; size: 16 MB
+08-14 08:15:00 pageStore: Transaction log could not be truncated; size: 16 MB
+08-22 21:21:00 pageStore: Transaction log could not be truncated; size: 16 MB
+09-05 23:15:00 pageStore: Transaction log could not be truncated; size: 16 MB
+09-09 07:33:00 pageStore: Transaction log could not be truncated; size: 16 MB
+09-12 21:33:00 pageStore: Transaction log could not be truncated; size: 16 MB
+09-15 07:09:00 pageStore: Transaction log could not be truncated; size: 16 MB
+09-16 02:00:00 pageStore: Transaction log could not be truncated; size: 16 MB
+09-22 04:24:00 pageStore: Transaction log could not be truncated; size: 16 MB
+09-22 23:24:00 pageStore: Transaction log could not be truncated; size: 16 MB
+09-24 19:48:00 pageStore: Transaction log could not be truncated; size: 16 MB
+10-16 17:27:00 pageStore: Transaction log could not be truncated; size: 16 MB
+10-16 22:57:00 pageStore: Transaction log could not be truncated; size: 16 MB
+10-24 18:03:00 pageStore: Transaction log could not be truncated; size: 16 MB
+10-26 21:03:00 pageStore: Transaction log could not be truncated; size: 16 MB
+10-31 19:06:01 pageStore: Transaction log could not be truncated; size: 16 MB
+11-17 14:36:00 pageStore: Transaction log could not be truncated; size: 16 MB
+11-17 23:15:00 pageStore: Transaction log could not be truncated; size: 16 MB
+11-19 00:09:01 pageStore: Transaction log could not be truncated; size: 16 MB
+11-24 23:57:01 pageStore: Transaction log could not be truncated; size: 16 MB
+11-28 11:24:01 pageStore: Transaction log could not be truncated; size: 16 MB
+12-01 22:51:01 pageStore: Transaction log could not be truncated; size: 16 MB
+12-09 05:15:00 pageStore: Transaction log could not be truncated; size: 16 MB
+12-09 17:36:02 pageStore: Transaction log could not be truncated; size: 16 MB
+12-10 12:15:01 pageStore: Transaction log could not be truncated; size: 16 MB
+12-16 12:33:01 pageStore: Transaction log could not be truncated; size: 16 MB
+01-16 15:12:01 pageStore: Transaction log could not be truncated; size: 16 MB
+01-28 11:30:09 pageStore: Transaction log could not be truncated; size: 16 MB

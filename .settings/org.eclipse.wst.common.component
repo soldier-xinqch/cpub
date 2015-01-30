@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="trunk">
+        <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
+        <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
+        <dependent-module archiveName="hx-common-2.0.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/hx-common/hx-common">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hx-test-2.0.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/hx-test/hx-test">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hx-sys-2.0.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/hx-sys/hx-sys">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hx-auth-dm-2.0.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/hx-auth-dm/hx-auth-dm">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hx-auth-common-2.0.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/hx-auth-common/hx-auth-common">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hx-auth-shiro-2.0.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/hx-auth-shiro/hx-auth-shiro">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hx-auth-canonical-2.0.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/hx-auth-canonical/hx-auth-canonical">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="context-root" value="oss"/>
+        <property name="java-output-path" value="/trunk/target/classes"/>
+    </wb-module>
+</project-modules>

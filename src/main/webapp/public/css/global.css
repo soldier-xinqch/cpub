@@ -1,0 +1,817 @@
+/* 全局样式 */
+body,p,div,ul,ol,li,dl,dd,dt,h1,h2,h3,h4,h5,h6,form,input,select,label,table,tr,td,th,thead,tbody,tfoot
+	{
+	margin: 0px auto;
+	padding: 0px;
+	border: 0;
+}
+
+ul,ol {
+	list-style: none;
+}
+
+body {
+	font-size: 12px;
+	font-family: Tahoma, Geneva, sans-serif;
+	background-position: top;
+	background-repeat: repeat-x;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0px;
+	width: 910px;
+	border: 0px;
+	text-align: center;
+}
+
+a {
+	text-decoration: none;
+}
+
+input,select {
+	height: 30px;
+	line-height: 27px;
+	padding-left: 3px;
+}
+
+textarea {
+	font-size: 12px;
+	font-family: Tahoma, Geneva, sans-serif;
+}
+
+.width50 {
+	width: 50px;
+}
+
+.width70 {
+	width: 70px;
+}
+
+.width80 {
+	width: 90px;
+}
+
+.width100 {
+	width: 100px;
+}
+
+.width110 {
+	width: 110px;
+}
+
+.width150 {
+	width: 150px;
+}
+
+.width180 {
+	width: 180px;
+}
+
+.width200 {
+	width: 200px;
+}
+
+.width300 {
+	width: 300px;
+}
+
+.width350 {
+	width: 350px;
+}
+
+.width400 {
+	width: 400px;
+}
+
+.width600 {
+	width: 600px;
+}
+
+.height70 {
+	height: 70px;
+}
+
+.hide {
+	display: none;
+}
+
+.show {
+	display: block;
+}
+
+/*清除浮动*/
+.clearfix {
+	clear: both;
+}
+
+/*浮动对象*/
+.left {
+	float: left;
+	display: inline;
+}
+
+.right {
+	float: right;
+	display: inline;
+}
+/*布局*/
+#header,#footer {
+	margin: 0px auto;
+	/* border:1px solid red; */
+}
+
+/*页头部分：header*/
+#header {
+	text-align: right;
+	height: 70px;
+}
+
+/*  数据主显示区域 */
+.main-data{
+	/* height: 1200px; */
+	padding: 0px;
+	margin-top: 0px;
+	text-align: center;
+	background: #e8f3f8;
+    border:5px solid #8ac1db;
+}
+
+/* 导航开始  */
+
+#menu {
+font-size: 12px;
+font-weight: bolder;
+}
+#menu li{
+list-style-image: none;
+list-style-type: none;
+background-color: #999999;
+border-right-width: 1px;
+border-right-style: solid;
+border-right-color: #c0c0c0;
+float: left;
+}
+#menu li a{
+display:block; /* 将链接设为块级元素 */
+width:211.5px; /* 设置宽度 */
+/* !important;width:210px;padding-right:10px;为了避免火狐和IE宽度上的冲突  */
+display:inline-block;
+height:35px; /* 设置高度 */
+line-height:35px; /* 设置行高，将行高和高度设置同一个值，可以让单行文本垂直居中 */
+text-align:center; /* 居中对齐文字 */
+background:#6699ff; /* 设置背景色 */
+color:#fff; /* 设置文字颜色 */
+text-decoration:none; /* 去掉下划线 */
+border-right:0px solid #c0c0c0; /* 在左侧加上分隔线 */
+
+}
+#menu li a:hover{
+background-color: #0099CC;
+}
+
+/*  导航结束 */
+
+
+/* 数据  展示  表格*/
+/*正文：数据表格部分*/
+#data {
+	min-height: 330px;
+}
+
+#datalist {
+	font-size: 12px;
+	margin-top: 5px;
+	text-align: center;
+	width: 1280px;
+}
+
+#datalist td {
+	height: 32px;
+	line-height: 32px;
+}
+
+#datalist th {
+	font-weight: bold;
+	text-align: center;
+	height: 35px;
+	line-height: 35px;
+}
+
+td.td_modi,th.td_modi {
+	width: 130px;
+	text-align: center;
+}
+
+th.th_select_all {
+	width: 70px;
+}
+
+#datalist th input {
+	height: 35px;
+	line-height: 35px;
+	float: left;
+	margin-left: 8px;
+	border-width: 0px;
+}
+
+#datalist th span {
+	display: block;
+	height: 35px;
+	line-height: 35px;
+	float: left;
+	margin-left: 5px;
+}
+
+#datalist tr input {
+	border-width: 0px;
+}
+/*  数据 展示 表格 结束 */
+
+/* 表单定义宽度  */
+.textInput{
+	width: 300px;
+}
+
+/*页脚部分：footer*/
+#footer {
+	clear:both;
+	height: 80px;
+	padding: 7px 0;
+	line-height: 25px;
+	text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#outPage{
+float:left;
+height:30px;
+padding: 10px 2px 1px 15px;	
+	
+}
+
+
+
+
+#header a {
+	margin-right: 50px;
+	line-height: 61px;
+	font-weight: bold;
+}
+
+/*正文区域：main*/
+#main {
+	/* width:100%; */
+	width:1350px;
+	height: 1900px;
+	padding: 0px;
+	margin-top: 0px;
+	max-height: 950px;
+	text-align: center;
+	position: relative;
+}
+
+#data{
+	width: 100%;
+	height: 650px;
+	border:1px solid red;	
+}
+/*添加及修改，点播页面的正文部分  */
+#toMain {
+	width:1000px;
+	height: 640px;
+	padding: 0px;
+	margin-top: 0px;
+	max-height: 950px;
+	text-align: center;
+	/*    overflow-x: hidden;
+    overflow-y: auto; */
+	position: relative;
+}
+#vod_pub_main{
+	width:1350px;
+	height: 840px;
+	padding: 0px;
+	margin-top: 0px;
+	max-height: 550px;
+	text-align: center;
+	position: relative;
+	background: #e8f3f8;
+	border:5px solid #8ac1db;
+}
+
+
+form.main_form {
+	width: 100%;
+	margin: 15px auto;
+	padding-top: 10px;
+}
+/*点播列表样式   */
+form.vod_main_form {
+	width: 80%;
+	margin: 15px auto;
+}
+form.vod_ch_form{
+	width: 100%;
+	margin: 15px auto;
+}
+#vod{
+	font-size: 12px;
+	margin-top: 5px;
+	text-align: center;
+	width: 100%;
+/* 	border:1px solid red; */
+}
+#vod td {
+	height: 32px;
+	line-height: 32px;
+/* 	border:1px solid red; */
+}
+
+#vod tr {
+	font-weight: bold;
+	text-align: center;
+	height: 35px;
+	line-height: 35px;
+}
+/*直播安排增加-更改  */
+#addPub{
+	font-size: 13px;
+	margin-top: 0px;
+	text-align: center;
+	width: 960px;
+ /* 	border:1px solid red;  */
+}
+#addPub td{
+	/* width:50%; */
+	height: 32px;
+	line-height: 32px;
+	border: solid #e8f3f8 20px;
+} 
+/*正文区域中的两个并列的div块*/
+#courtList {
+	margin: 0px auto;
+	padding: 0px;
+	margin-top: 0px;
+	background: #E8F3F0;
+	width: 18%;
+	height: 500px;
+	max-height: 950px;
+	float: left;
+	/* border:1px solid red;  */
+}
+
+#vodList
+{
+		margin:0px auto;
+	 	padding:0px;
+		background:#E8F3F0;
+		margin-top: 0px;
+		width:81%;
+		height:500px;
+		max-height: 950px;
+		float:right;
+	 	/* border:1px solid red; */
+}
+#pubList {
+	margin: 0px auto;
+	padding: 0px;
+	background: #E8F3F0;
+	margin-top: 0px;
+	width: 100%;
+	height: 300px;
+	max-height: 300px;
+	float: top;
+	overfolw-y: scroll;
+	/* border:1px solid red; */
+}
+/* 点播标题部分*/
+#event {
+	MARGIN-RIGHT: auto;
+	MARGIN-LEFT: auto;
+	font-size: 22px;
+	width: 240px;
+	height: 100px;
+	vertical-align: middle;
+	line-height: 100px;
+}
+/*新增页面-更改页面-详细页面   */
+/*标题部分  */
+#head_title {
+	width: 100%;
+	height: 50px;
+}
+
+#add_title {
+	font-size: 24px;
+	font-weight: bold;
+	color: #445151;
+}
+
+#add_table {
+	width: 90%;
+	font-size:12px;
+	cellpadding: 50px;
+	cellspacing: 10px;
+	border: 1px #e8f3f8 red;
+	/* border: solid red 1px; */
+}
+
+#add_table td {
+	align: center;
+	height: 30px;
+	border: solid #e8f3f8 20px;
+	/* border: solid red 1px; */
+}
+#pub_vod_table{
+	width: 100%;
+	height: 40%;
+	font-size:13px;
+	border: 1px #e8f3f8 red;
+	/* border: solid red 1px; */
+}
+#pub_vod_table td{
+	align: center;
+	height: 20px;
+	border: solid #e8f3f8 5px;
+	/* border: solid red 1px; */
+}
+#caseNum {
+	font-size:20px;
+	text-align:center;
+	height: 30px;
+	line-height: 60px;
+}
+
+#caseName {
+	font-size:18px;
+	text-align:center;
+	height: 58px;
+	line-height: 60px;
+}
+/*whereNull界面  */
+#warning{
+	width: 100%;
+	height: 150px;
+}
+/*正文：查询条件部分*/
+div.search_add {
+	width: 100%;
+	height: 30px;
+	text-align: left;
+	/* margin-top: 5px; */
+	/*   border:1px solid red; */
+}
+
+div.search_add div {
+	float: right;
+	margin-right: 18px;
+	line-height: 25px;
+}
+
+div.search_add span {
+	margin-left: 5px;
+}
+
+#selectCourt{
+	width: 150px; 
+	text-align: center; 
+	height: 25px;
+}
+#selectCasetype{
+	width: 120px; 
+	text-align: center; 
+	height: 25px;
+}
+
+
+/* 表格中的显示详细 */
+a.summary {
+	cursor: default;
+	color: gray;
+	font-weight: bold;
+	display: block;
+	width: 100%;
+	line-height: 100%;
+}
+
+div.detail_info {
+	position: absolute;
+	z-index: 1000;
+	min-width: 150px;
+	min-height: 40px;
+	display: none;
+	padding: 3px;
+	overflow: visible;
+	text-align: left;
+}
+
+/* 正文：表单部分（div实现方式） */
+div.text_info {
+	width: 200px;
+	text-align: right;
+	float: left;
+	height: 40px;
+	margin-top: 5px; /*5*/
+	/*border:1px solid black;*/
+	margin-bottom: 5px;
+}
+
+div.text_info span {
+	display: block;
+}
+
+div.input_info {
+	width: 580px;
+	text-align: left;
+	margin-left: 10px;
+	float: left;
+	height: 40px;
+}
+
+div.input_info span.info {
+	display: inline-block;
+	width: 50px;
+}
+
+div.fee_type input,div.fee_type label {
+	border-width: 0px;
+	display: block;
+	height: 30px;
+	line-height: 27px;
+	float: left;
+	margin-left: 5px;
+}
+
+div.fee_type label {
+	margin-left: 3px;
+	margin-right: 5px;
+}
+
+div.change_pwd {
+	clear: both;
+	width: 410px;
+	float: right;
+}
+
+div.change_pwd input,div.change_pwd label {
+	display: block;
+	height: 30px;
+	line-height: 27px;
+	float: left;
+	margin-left: 5px;
+	border-width: 0px;
+}
+
+#optionalInfo {
+	clear: both;
+	height: 390px;
+	padding-top: 10px;
+}
+
+#divPwds {
+	display: none;
+	clear: both;
+	height: 130px;
+	padding-top: 10px;
+}
+
+div.validate_msg_long,div.validate_msg_medium,div.validate_msg_short,div.validate_msg_tiny
+	{
+	/*height: 28px;*/
+	line-height: 28px;
+	float: right;
+	overflow: hidden;
+	text-align: left;
+	padding-left: 5px;
+}
+
+div.error_msg {
+	padding-left: 17px;
+}
+
+div.validate_msg_long {
+	width: 390px;
+}
+
+div.validate_msg_medium {
+	width: 340px;
+}
+
+div.validate_msg_short {
+	width: 240px;
+	line-height: 28px;
+}
+
+div.validate_msg_tiny {
+	width: 190px;
+	line-height: 28px;
+}
+
+div.input_info_scroll {
+	width: 360px;
+	text-align: left;
+	float: left;
+	height: 87px;
+	overflow-y: scroll;
+	overflow-x: auto;
+	border: 1px solid silver;
+}
+
+div.input_info_scroll li {
+	float: left;
+	line-height: 22px;
+	height: 22px;
+	margin: 2px 2px 5px 5px;
+	width: 106px;
+}
+
+div.input_info_scroll li span {
+	display: block;
+	float: left;
+	line-height: 22px;
+	height: 22px;
+}
+
+div.input_info_scroll li input {
+	height: 22px;
+	line-height: 22px;
+	margin-right: 3px;
+	float: left;
+	border-width: 0px;
+}
+
+div.input_info_high {
+	width: 300px;
+	text-align: left;
+	margin-left: 0px;
+	float: left;
+	height: 90px;
+	margin-bottom: 10px;
+}
+
+div.button_info {
+	text-align: left;
+	width: 380px;
+	/*border:1px solid blue;*/
+}
+
+span.required {
+	font-size: 10pt;
+}
+
+/* 保存操作后的提示消息 */
+#save_result_info {
+	width: 600px;
+	line-height: 50px;
+	padding-left: 40px;
+	font-size: 14px;
+	display: none;
+	font-weight: bold;
+}
+/*增加案件信息提示部分  */
+#case_num{
+	font-size: 12px;
+	color:red;
+	display: none;
+}
+#case_name{
+	font-size: 12px;
+	color:red;
+	display: none;
+}
+#court_id{
+	font-size: 12px;
+	color:red;
+	display: none;
+}
+/* 删除操作后的提示消息 */
+#operate_result_info
+{
+    width: 400px;
+    line-height: 70px;
+    padding-left: 40px;
+    font-size: 16px;
+    display: none;
+    position: absolute;
+    z-index: 100;
+    top: 90px;
+    left: 30%;
+}
+#operate_result_info img
+{
+    float: right;
+    margin-right: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+
+/* 表单上的元素：控件 */
+span.readonly {
+	line-height: 28px;
+	display: inline-block;
+	text-align: left;
+	padding-left: 3px;
+}
+
+input.text_search,select.select_search {
+	height: 23px;
+	width: 200px;
+	line-height: 23px;
+	margin-left: 0px;
+}
+
+input.btn_search {
+	height: 23px;
+	line-height: 23px;
+	width: 27px;
+	padding-left: 0px;
+	margin-left: 0px;
+	font-size:12px;
+}
+input.btn_return{
+	height: 23px;
+	padding-left: 0px;
+	margin-left: 0px;
+	font-size:12px;
+}
+.vod_disable{
+	height: 23px;
+	line-height: 23px;
+	width: 27px;
+	padding-left: 0px;
+	margin-left: 0px;
+	font-size:12px;
+}
+.vod_search{
+	height: 23px;
+	line-height: 23px;
+	width: 27px;
+	padding-left: 0px;
+	margin-left: 0px;
+	font-size:12px;
+}
+input.btn_search_large {
+	height: 26px;
+	line-height: 26px;
+	width: 110px;
+	padding-left: 18px;
+	margin-left: 3px;
+}
+
+input.btn_search:hover,input.btn_search_large:hover,input.vod_search:hover,input.vod_disable:hover
+,input.btn_return {
+	font-weight: bold;
+}
+
+input.btn_add {
+	height: 26px;
+	line-height: 26px;
+	width: 71px;
+	float: right;
+	text-align: center;
+	overflow: hidden;
+	padding-left: 0px;
+	position: relative;
+	top: 2px;
+	left: -10px;
+}
+
+input.btn_modify,input.btn_delete,input.btn_start,input.btn_pause,input.btn_choose
+	{
+	margin-left: 3px;
+	width: 60px;
+	cursor: pointer;
+}
+
+input.btn_save {
+	width: 100px;
+	height: 36px;
+	line-height: 36px;
+	font-size: 12px;
+	text-align: center;
+	padding-left: 0px;
+	margin-right: 5px;
+	color: black;
+}

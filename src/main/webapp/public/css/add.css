@@ -1,0 +1,48 @@
+#plan_table{
+	width:550px;
+	font-size: 12px;
+}
+#plan_table td{
+	align: center;
+	height: 30px;
+	border: solid #e8f3f8 10px;
+	/* border: solid red 1px; */
+}
+
+#plan_case_table{
+	width:320px;
+	font-size:12px;
+	float:left;
+	border:1px solid black;
+}
+#plan_case_table td{
+	width:100px;
+	align: center;
+	height: 30px;
+	border: solid black 1px; 
+}
+
+#add_bill_main {
+	/* width:100%; */
+	width:1350px;
+	height: 840px;
+	padding: 0px;
+	margin-top: 0px;
+	max-height: 550px;
+	text-align: center;
+	position: relative;
+	background: #e8f3f8;
+	border:5px solid #8ac1db;
+}
+
+
+/*��ͥ��Ӽ����������֤����  */
+#resultMessage{
+	color:red;
+	font-size: 12px;
+	z-index: 10;
+}
+
+
+
+

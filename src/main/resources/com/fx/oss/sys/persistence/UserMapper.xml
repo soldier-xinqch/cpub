@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.fx.oss.sys.persistence.UserMapper">
+
+  <cache />
+<!-- 	<resultMap id="UserMap" type="com.fx.oss.domain.User">
+		<id column="ID" property="id" jdbcType="VARCHAR" />
+		<result column="CREATE_TIME" property="createTime" jdbcType="TIMESTAMP" />
+		<result column="UPDATE_TIME" property="updateTime" jdbcType="TIMESTAMP" />
+		<result column="LAST_UPDATOR" property="lastUpdator" jdbcType="VARCHAR"/>
+		<result column="CREATE_BY" property="createBy" jdbcType="VARCHAR" />	
+		<result column="USER_NAME" property="userName" jdbcType="VARCHAR"/> 
+		<result column="USER_PASSWORD" property="userPassword" jdbcType="VARCHAR"/>
+		<result column="REAL_NAME" property="realName" jdbcType="VARCHAR"/>
+		<result column="ROLES" property="roles" jdbcType="VARCHAR"/>
+		<result column="COURT_ID" property="courtId" jdbcType="VARCHAR" />
+	</resultMap>
+ -->
+  <!--通过用户名称获得用户  -->
+  <select id="getUserByUserName" parameterType="string" resultType="User">
+    select * from sys_user where user_name=#{userName}
+  </select>
+  <!--通过ID来获得用户  -->
+  <select id="getUserById" parameterType="long" resultType="User">
+    select user.*,org.org_name as courtName from sys_user user , tp_org org
+    <where>
+   	 org.id = user.court_id AND user.id=#{id}
+    </where> 
+  </select>
+  <!--通过法院ID来获得用户列表  -->
+   <select id="getUserBycourtId" parameterType="String" resultType="User">
+    select user.*,org.org_name as courtName from sys_user user, tp_org org where org.id = user.court_id and user.court_id=#{courtId}
+  </select>
+  <!-- 得到所有的用户 -->
+  <select id="findAll" resultType="User">
+  	select * from sys_user
+  </select>
+  <!--分页显示所有用户  -->
+  <select id="findAllByPage" resultType="User" >
+  	select * from sys_user limit #{begin},#{size}
+  </select> 
+  <!--获得所有用户的记录条数  -->
+   <select id="getUserNum" resultType="java.lang.Integer" >
+  	select count(*) from sys_user 
+  </select> 
+  <!--插入一条用户信息  -->
+  <insert id="insertUser" parameterType="com.fx.oss.domain.User">
+  	insert into sys_user (ID,CREATE_TIME,UPDATE_TIME,LAST_UPDATOR,CREATE_BY,USER_NAME,USER_PASSWORD,REAL_NAME,ROLES,COURT_ID,PHOTO)
+  	 values (#{id},#{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP},
+  	 	#{lastUpdator,jdbcType=VARCHAR},#{createBy,jdbcType=VARCHAR},#{userName,jdbcType=VARCHAR},#{userPassword,jdbcType=VARCHAR},
+  	 	#{realName,jdbcType=VARCHAR},#{roles,jdbcType=VARCHAR},#{courtId,jdbcType=VARCHAR},#{photo,jdbcType=VARCHAR})
+  </insert>
+  <!--更改用户信息  -->
+  <update id="updateUser" parameterType="com.fx.oss.domain.User">
+  	update sys_user set
+  	CREATE_TIME = #{createTime,jdbcType=TIMESTAMP},UPDATE_TIME= #{updateTime,jdbcType=TIMESTAMP},
+  	LAST_UPDATOR= #{lastUpdator,jdbcType=VARCHAR},CREATE_BY = #{createBy,jdbcType=VARCHAR},USER_NAME = #{userName,jdbcType=VARCHAR},
+  	USER_PASSWORD = #{userPassword,jdbcType=VARCHAR},REAL_NAME = #{realName,jdbcType=VARCHAR},ROLES= #{roles,jdbcType=VARCHAR},
+  	COURT_ID = #{courtId,jdbcType=VARCHAR} where ID = #{id,jdbcType=VARCHAR};
+  </update>
+  <!-- 删除用户信息  -->
+  <delete id="deleteUser" parameterType="java.lang.Long">
+ 	 delete from sys_user
+		where ID = #{id}
+  </delete>
+  <!-- 根据用户角色查找一个法院的用户并分页显示   -->
+  <select id="getHEYIPersons" resultType="User" >
+  	select us.*, org.org_name as courtName from sys_user us , tp_org org
+  	<where>
+  		<if test="list != null">
+  			COURT_ID in
+			<foreach collection="list" index="index" item="item" open="("
+				separator="," close=")">
+				#{item}
+			</foreach>
+  		</if>
+  		<if test="roles != null">
+			and ROLES = #{roles}
+	    </if>
+	    and us.court_id = org.id
+  	</where>
+  	 limit #{begin},#{size}
+  </select>
+  
+    <!-- 根据用户角色查找一个法院的用户计算其记录总条数   -->
+  <select id="getHEYINums" resultType="java.lang.Integer">
+  	select count(*) from sys_user
+  	<where>
+  		<if test="list != null">
+  			COURT_ID in
+			<foreach collection="list" index="index" item="item" open="("
+				separator="," close=")">
+				#{item}
+			</foreach>
+  		</if>
+	
+  		<if test="roles != null">
+			and ROLES = #{roles}
+		</if>
+  	</where>
+  </select>
+  
+  <!--模糊查询获取用户列表  -->
+  <select id="findUserLikeName" resultType="User" >
+  		select us.*, org.org_name as courtName from sys_user us , tp_org org
+  	<where>
+  		<if test="courtId !=null">
+  			us.COURT_ID = #{courtId,jdbcType=VARCHAR}
+  		</if>
+  		<if test="userName !=null">
+			and us.USER_NAME like '%'||#{userName}||'%'
+		</if>
+		<if test="roles !=null">
+			and ROLES = #{roles}
+		</if>
+		and us.court_id = org.id
+  	</where>
+  	 limit #{begin},#{size}
+  </select> 
+  
+    <!--模糊查询获取用户列表  -->
+  <select id="getUserNumLikeName" resultType="int" >
+  	select count(*)  from sys_user
+  	<where>
+  		<if test="courtId !=null">
+  			COURT_ID = #{courtId,jdbcType=VARCHAR}
+  		</if>
+  		<if test="userName !=null">
+			and USER_NAME like '%'||#{userName}||'%'
+		</if>
+		<if test="roles !=null">
+			and ROLES like '%'||#{roles}||'%'
+		</if>
+  	</where>
+  </select> 
+  
+</mapper>

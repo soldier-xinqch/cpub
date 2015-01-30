@@ -1,0 +1,95 @@
+package com.ht.court.service;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.ht.court.model.CourtCasePlan;
+import com.hx.test.HxSpringTestCase;
+import com.hx.util.Page;
+
+/**
+ * 案件排期信息服务单元测试。
+ * 
+ * @author xinqichao
+ * @version 1.0 2014/04/30
+ *
+ */
+public class CourtCasePlanServiceTest extends HxSpringTestCase {
+
+	public static final String MODEL_ID="1";
+	
+	@Autowired
+	private CourtCasePlanService courtCasePlanService;
+
+	/**
+	 * 测试查询。
+	 * 
+	 * @throws Exception
+	 */
+	@Test
+	public void testFindByPage() throws Exception {
+		Page<CourtCasePlan> page=courtCasePlanService.findByPage(0, Integer.MAX_VALUE, null);
+		assertNotNull(page);
+		assertEquals(1,page.getList().size());
+	}
+
+	/**
+	 * 测试新增。
+	 * 
+	 * @throws Exception
+	 */
+	@Test
+	public void testCreate() throws Exception {
+		CourtCasePlan courtCasePlan=new CourtCasePlan();
+		courtCasePlan.genUUIDIfNeeded();
+		String uid=courtCasePlan.getId();
+		courtCasePlanService.create(courtCasePlan);
+		courtCasePlan=courtCasePlanService.get(uid);
+		assertNotNull(courtCasePlan);
+		assertEquals(uid,courtCasePlan.getId());
+	}
+
+	/**
+	 * 测试按主键查询。
+	 * 
+	 * @throws Exception
+	 */
+	@Test
+	public void testGet() throws Exception {
+		CourtCasePlan courtCasePlan=courtCasePlanService.get(MODEL_ID);
+		assertNotNull(courtCasePlan);
+		assertEquals(MODEL_ID,courtCasePlan.getId());
+	}
+
+	/**
+	 * 测试更新。
+	 * 
+	 * @throws Exception
+	 */
+	@Test
+	public void testUpdate() throws Exception {
+		CourtCasePlan courtCasePlan=courtCasePlanService.get(MODEL_ID);
+		String updateUser="somebody";
+		courtCasePlan.setUpdateUser(updateUser);
+		courtCasePlanService.update(courtCasePlan);
+		courtCasePlan=courtCasePlanService.get(MODEL_ID);
+		assertEquals(updateUser,courtCasePlan.getUpdateUser());
+	}
+
+	/**
+	 * 测试删除。
+	 * 
+	 * @throws Exception
+	 */
+	@Test
+	public void testDelete() throws Exception {
+		CourtCasePlan courtCasePlan=courtCasePlanService.get(MODEL_ID);
+		assertNotNull(courtCasePlan);
+		courtCasePlanService.delete(MODEL_ID);
+		courtCasePlan=courtCasePlanService.get(MODEL_ID);
+		assertNull(courtCasePlan);
+	}
+
+}

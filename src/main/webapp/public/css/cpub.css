@@ -1,0 +1,391 @@
+@chartset "utf-8"
+/* 全局样式 */
+body,p,div,ul,ol,li,dl,dd,dt,h1,h2,h3,h4,h5,h6,form,input,select,label,table,tr,td,th,thead,tbody,tfoot
+	{
+	margin: 0px auto;
+	padding: 0px;
+	border: 0;
+}
+
+
+.width50 {
+	width: 50px;
+}
+
+.width70 {
+	width: 70px;
+}
+
+.width80 {
+	width: 90px;
+}
+
+.width100 {
+	width: 100px;
+}
+
+.width110 {
+	width: 110px;
+}
+
+.width150 {
+	width: 150px;
+}
+
+.width180 {
+	width: 180px;
+}
+
+.width200 {
+	width: 200px;
+}
+.width244{
+	width: 244px;
+}
+
+.width328{
+	width: 328px;
+}
+
+.width300 {
+	width: 300px;
+}
+
+.width350 {
+	width: 350px;
+}
+
+.width400 {
+	width: 400px;
+}
+.width460 {
+	width: 460px;
+}
+
+.width600 {
+	width: 600px;
+}
+
+.height70 {
+	height: 70px;
+}
+
+.hide {
+	display: none;
+}
+
+.show {
+	display: block;
+}
+
+/*清除浮动*/
+.clearfix {
+	clear: both;
+}
+
+/*浮动对象*/
+.left {
+	float: left;
+	display: inline;
+}
+
+.right {
+	float: right;
+	display: inline;
+}
+
+
+.marginDivLeft{
+	margin-left:20px; 
+}
+.marginDivRight{
+	margin-right:20px; 
+}
+
+/* 隐藏 */
+.disPlayDiv{
+	display: none;
+}
+/* 页头部分 */
+.header{
+	height:60px;
+	background-color: #2BB4D6;
+}
+.timeAndLoginUser{
+	/* 绝对定位 */
+	position: absolute; 
+	right:20px; 
+	top: 30px;
+}
+
+/* 页头结束 */
+
+/* body--数据主显示区域 */
+.main-data{
+	/* height: 1200px; */
+	padding: 0px;
+	padding:0 30px;
+	min-height:600px;
+	text-align: center;
+	background: #e8f3f8;
+    border:5px solid #8ac1db;
+}
+
+/* 导航开始  */
+
+.menu {
+
+	margin: 30px 0px 10px 0px;
+		}
+/* 
+#menu li{
+	list-style-image: none;
+	list-style-type: none;
+	background-color: #999999;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #c0c0c0;
+	float: left;
+}
+*/
+#menu li a{
+	display:block; /* 将链接设为块级元素 */
+	display:inline-block;
+	height:35px; /* 设置高度 */
+	line-height:35px; /* 设置行高，将行高和高度设置同一个值，可以让单行文本垂直居中 */
+	text-align:center; /* 居中对齐文字 */
+	background:#6699ff; /* 设置背景色 */
+	color:#fff; /* 设置文字颜色 */
+	text-decoration:none; /* 去掉下划线 */
+	border-right:0px solid #c0c0c0; /* 在左侧加上分隔线 */
+} 
+#menu li a:hover{
+	background-color: #0099CC;
+}
+
+/*  导航结束 */
+
+/*正文：数据表格部分*/
+#data {
+	min-height: 330px;
+}
+
+#datalist {
+	font-size: 13px;
+	text-align: center;
+	width: 100%;
+}
+
+#datalist td {
+	height: 32px;
+	line-height: 32px;
+}
+
+#datalist th {
+	font-weight: bold;
+	text-align: center;
+	height: 35px;
+	line-height: 35px;
+}
+
+td.td_modi,th.td_modi {
+	width: 130px;
+	text-align: center;
+}
+
+th.th_select_all {
+	width: 70px;
+}
+
+#datalist th input {
+	height: 35px;
+	line-height: 35px;
+	float: left;
+	margin-left: 8px;
+	border-width: 0px;
+}
+
+#datalist th span {
+	display: block;
+	height: 35px;
+	line-height: 35px;
+	float: left;
+	margin-left: 5px;
+}
+
+#datalist tr input {
+	border-width: 0px;
+}
+
+/* 背景样式  */
+#datalist
+{
+    background-color:#fff;
+}
+#datalist td
+{
+    border: #CCC solid 1px;
+}
+#datalist tr:hover
+{
+    background-color:#f7f9fd;
+}
+#datalist th
+{
+    background: #fbedce;
+    border: #CCC solid 1px;
+}
+
+/*  数据 展示 表格 结束 */
+
+/***panel区样式 ***/
+.prompBoxHeader{
+	height: 30px;
+	font-size:14px;
+	line-height:30px;
+	padding-left:4px;
+	background-color:orange;
+	}
+
+.promptBox {
+	margin:0 auto;   
+	width:90%;
+	height:50px;
+	line-height:50px;
+	margin:15px;
+	*margin:15px;
+	_margin:15px;
+	text-align:center;
+	}
+	
+.promptBoxMeggess{
+	padding-left: 18px;
+	
+}
+
+/*  弹出框结束 */
+.bodyDiv{
+	min-height: 510px;
+}
+.bodyForm{
+	margin: 30px 0px 30px 0px;
+}
+.bodyData{
+	margin:0px 0px 10px 0px;
+	text-align: center;
+}
+.bodySearch{
+	width: 200px;
+	text-align: center;
+	height: 34px;
+	float: left;
+}
+
+.formBtn{
+	width：100px;
+	margin-bottom: 20px;
+	
+}
+/* body--数据主显示区域  结束*/
+
+/* 直播预告添加与修改样式开始 */
+.addAndUpdatPlanTable{
+	width:328px;
+	padding:0px;
+	border:1px solid black;
+	
+}
+.addAndUpdatPlanTable td
+{
+   padding:0px;
+   border:1px solid black;
+}
+
+.addAndUpdatPlanTable tr
+{
+   padding:0px;
+   border:1px solid black;
+}
+
+.planTable{
+	width:100%;
+	padding:0px;
+	border:0px ;	
+}
+.planTable td
+{
+   padding:0px;
+   margin-bottom: 12px;
+   border:0px ;	
+}
+
+.planTable tr
+{
+   /* padding:0px; */
+   border:5px solid #E8F3F8 ;	
+}
+
+/* 直播预告添加与修改样式结束 */
+/* 页脚部分 */
+.footer{
+	text-align:center;
+	height:60px;
+	padding-top:20px;
+	background-color: #2BB4D6;
+}
+/* 页脚结束 */
+
+
+
+/* 按钮样式 */
+.button-success,
+        .button-error,
+        .button-warning,
+        .button-secondary {
+            color: white;
+            border-radius: 4px;
+            height:27px;
+            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+        }
+
+        .button-success {
+            background: rgb(28, 184, 65); /* this is a green */
+        }
+
+        .button-error {
+            background: rgb(202, 60, 60); /* this is a maroon */
+        }
+
+        .button-warning {
+            background: rgb(223, 117, 20); /* this is an orange */
+        }
+
+        .button-secondary {
+            background-color:#0099CC;
+            /* rgb(66, 184, 221);*/ /* this is a light blue */
+        }
+        
+        
+input.btn_return{
+	height: 23px;
+	padding-left: 0px;
+	margin-left: 0px;
+	font-size:12px;
+}
+
+input.btn_search:hover,input.btn_search_large:hover,input.vod_search:hover,input.vod_disable:hover
+,input.btn_return {
+	font-weight: bold;
+}
+
+input.btn_search:hover,input.btn_search_large:hover,input.vod_search:hover,input.btn_return:hover
+{
+    color: #0a97ff;
+}
+input.btn_search,input.btn_search:hover,input.btn_search:active,input.vod_search,input.btn_return
+{
+    background: no-repeat;
+    color: #0a97c9;
+    border:0;
+}
+/* 按钮样式结束*/

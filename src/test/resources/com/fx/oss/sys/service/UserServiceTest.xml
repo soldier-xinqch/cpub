@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+   dbunit 数据
+-->
+
+<dataset>
+    <sys_user id="1" user_name="admin" user_password="e10adc3949ba59abbe56e057f20f883e" real_name="管理员" 
+        create_time="2013-09-12 11:00:00" update_time="2013-09-12 11:00:00" create_by="admin" update_by="admin"
+        roles="ROLE_ADMIN"/>
+</dataset>

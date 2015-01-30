@@ -1,0 +1,31 @@
+@CHARSET "UTF-8";
+body{margin: 0;padding: 0;overflow: hidden;font-family: Arial;font-size: 12px;}
+table{border-collapse:collapse;font-family: Arial;font-size: 12px;height: 48px;}
+.top_tab{width: 100%;border-collapse:collapse;}
+.top_tab tr{background: url('../images/body/T1.jpg');background-repeat: repeat-x;}
+.top_tab td{white-space: nowrap;}
+.toptitle_td{width: 255px;background: url('../images/body/T2.jpg');float: left;margin-left: 15%;background-repeat: repeat-x;}
+.topInfo_td{padding-right: 30%;padding-top: 10px;color: #E6ECFA;text-align: right;font-family: Arial;font-size: 12px;}
+.exit_font{color: #E6ECFA;font-size:12px;cursor:pointer;}
+.bodyStyle_div{width: 75%;height: 100%;background-color: #EDEFF4;position:absolute;z-index:-1;margin-left: 12.5%;}
+.fieldsetStyle{width: 90%;height: 70%;position: relative;margin-left: 5%}
+.title_div{width: 90%;height: 30px;max-height: 34px;position: relative;top: 20px;text-align: left;margin-bottom: 30px;border-bottom: 4px solid #43516D;margin-left: 5%;}
+.label_div{width: 108px;height: 30px;margin-right: 10px;margin-bottom: 0px;background: url('../images/body/Label_unSelected.png');float: left;text-align: center;padding-top: 8px;cursor:pointer;background-repeat: no-repeat;}
+.tab tr{height: 30px;}
+.tab td{padding-left: 4px;}
+.tab th{background:url('../images/body/th.jpg');white-space: nowrap;height: 28px; }
+.tab_head{font-size: 14px;font-weight: bolder;color: #3057A9;background-color: #D6DAE5}
+#update_table{border: 1px solid #979CB1;width: 95%;margin-top: 20px;margin-left: 2.5%}
+#update_table th{border: 1px solid #979CB1;color: #6D6D6E}
+
+.content_div{width: 90%;height: 70%;position: relative;background-color: #F8F9FB;border: 1px solid #979CB1;text-align: left;margin-left: 5%;}
+.left_div{width: 200px;;height: 100%;background-color: #DADEE7;}
+.head_div{width: 100%;height: 23px;background:url('../images/body/th.jpg');border-bottom: 1px solid #979CB1;border-right:1px solid #979CB1;font-size: 14px;font-weight: bolder;color: #6D6D6E;padding-top: 7px;white-space: nowrap;  }
+.leftLabel_div{width: 170px;height: 30px;background-color: #E0E3EA;color: #333333;padding-top: 6px;padding-left: 15%;white-space: nowrap;cursor:pointer;}
+#IP_div{background-color: #F8F9FB;}
+
+.page_div{width: 95%;height: 40px;text-align: left;color: #333333;padding-top: 10px;padding-left: 2.5%; }
+.num_div{width: 15px;height: 15px;background-color: #FFFFFF;border: 1px solid #797979;text-align: center;float: left;margin-right: 8px;white-space: nowrap;font-size: 11px;padding-top: 1px;cursor: pointer;}
+
+.tab_selected{background: url('../images/body/Label_Selected.png');background-repeat: no-repeat;color:#E6ECFA}
+

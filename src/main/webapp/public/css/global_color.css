@@ -1,0 +1,264 @@
+/* 全局样式 */
+body
+{
+    background-color: #9A9EAF;
+}
+
+/* 页头部分：header */
+
+#header
+{
+   /* background: url(../imgs/top/T2.jpg) no-repeat;*/
+    background-color: #2BB4D6;
+   /*  border:5px solid #2BB4D6; */
+}
+#header a
+{
+    color: #fff;
+    text-decoration: none;
+}
+/* 正文区域：main */
+#main
+{
+    background: #e8f3f8;
+    border:5px solid #8ac1db;
+}
+/*添加及修改，点播页面的正文部分  */
+#toMain
+{
+    background: #e8f3f8;
+   /*  border:5px solid #8ac1db; */
+}
+#vod_pub_main{
+	background: #e8f3f8;
+    /* border:5px solid #8ac1db; */
+}
+/* 点播信息列表 部分 */
+#vod{
+	 background-color:#fff;
+}
+#vod th
+{
+    background: #fbedce;
+    border: #CCC solid 1px;
+}
+#vod td
+{
+    border: #CCC solid 1px;
+}
+/* 正文：表格部分 */
+
+#datalist
+{
+    background-color:#fff;
+}
+#datalist td
+{
+    border: #CCC solid 1px;
+}
+#datalist tr:hover
+{
+    background-color:#f7f9fd;
+}
+#datalist th
+{
+    background: #fbedce;
+    border: #CCC solid 1px;
+}
+
+/* 表格中显示详细消息 */
+div.detail_info
+{
+    background-color: #fbf0db;
+    border: 1px solid #ff9000;
+    color: #000;
+}
+
+/* 正文：表单部分（div实现方式） */
+span.required
+{
+    color:Red;
+    /*border:1px solid red;*/
+}
+/*div.validate_msg_long,div.validate_msg_medium,div.validate_msg_short,div.validate_msg_tiny*/
+div.error_msg
+{
+    color:Red;
+    background-image:url("../images/wrong.gif") ;
+    background-repeat:no-repeat;
+    background-position:left center;
+    border:1px solid red;
+}
+p.hide
+{
+    border-bottom:1px solid red;
+}
+#divPwds
+{
+    border-top:1px dotted #a1c7d9;
+    border-bottom:1px dotted #a1c7d9;
+    background-color:#fafeff;
+}
+#optionalInfo
+{
+   background-color:#f4f4f4;
+   border:1px solid #b4b4b4;
+}
+
+/* 保存操作后的提示消息 */
+div.save_success
+{
+    background-color: #fbf0db;
+    border: 1px solid #ff9000;
+    color: #af6606;
+    background-image: url(../images/ok.png);
+    background-repeat: no-repeat;
+    background-position:10px center;
+}
+div.save_fail
+{
+    background-color: #fbf0db;
+    border: 1px solid #ff9000;
+    color: #F00;
+    background-image: url(../images/fail.png);
+    background-repeat: no-repeat;
+    background-position:10px center;
+}
+
+/* 删除操作后的提示消息 */
+div.operate_success
+{
+    background-color: #fdecec;
+    border: 1px solid #f57676;
+    color: #af6606;    
+    background-image: url(../images/images/ok.png);
+    background-repeat: no-repeat;
+    background-position:10px center;
+}
+div.operate_fail
+{
+    background-color: #fdecec;
+    border: 1px solid #f57676;
+    color: #f00;    
+    background-image: url(../images/warning.png);
+    background-repeat: no-repeat;
+    background-position:10px center;
+}
+
+/* 正文：分页功能区 */
+#pages a
+{
+    color: #000;
+}
+#pages a:hover
+{
+    background: #cddde4;
+    border: #97b9c9 solid 1px;
+    color: #067db5;
+}
+#pages a.current_page
+{
+    background: #FFF;
+    border: #89bdd8 solid 1px;
+    color: #067db5;
+}
+
+
+/* 页脚部分：footer */
+#footer
+{
+    background-color: #2BB4D6;
+   /*   border:5px solid #2BB4D6; */
+}
+
+/* 表单上的元素：控件 */
+input,select
+{
+    border:1px solid silver;
+}
+input.readonly,textarea.readonly,span.readonly
+{
+    background-color:#f6f6f6;
+}
+input:focus,select:focus
+{
+    border-left:1px solid gray;
+    border-top:1px solid gray;
+}
+input.vod_disable{
+	/* background: url(../images/) no-repeat; */
+    background: no-repeat;
+    color: #EEEEEE;
+    border:0;
+}
+input.vod_disable:active
+{
+	  background: url(../images/search_large.png) no-repeat;
+    color: #EEEEEE;
+    border:0;
+	
+	}
+input.vod_disable:hover{
+	color: #EEEEEE;
+}
+input.btn_search,input.btn_search:hover,input.btn_search:active,input.vod_search,input.btn_return
+{
+    background: no-repeat;
+    color: #0a97c9;
+    border:0;
+}
+input.btn_search_large,input.btn_search_large:hover,
+input.btn_search_large:active,input.vod_search:active,input.btn_return:active
+{
+    background: url(../images/search_large.png) no-repeat;
+    color: #0a97c9;
+    border:0;
+}
+input.btn_search:hover,input.btn_search_large:hover,input.vod_search:hover,input.btn_return:hover
+{
+    color: #0a97ff;
+}
+input.btn_add,input.btn_add:hover
+{
+    background: url(../images/images/btn_bg.png) no-repeat left top;
+    color: #fff;
+    border:0;
+}
+input.btn_modify,input.btn_modify:hover
+{
+    background: url(../images/images/modification.png) no-repeat left center;
+    color: #000;
+    border:0;
+}
+input.btn_delete,input.btn_delete:hover
+{
+    background: url(../images/images/delete.png) no-repeat left center;
+    color: #000;
+    border:0;
+}
+input.btn_start,input.btn_start:hover
+{
+    background: url(../images/images/start.png) no-repeat left center;
+    color: #000;
+    border:0;
+}
+input.btn_pause,input.btn_pause:hover
+{
+    background: url(../images/pause.png) no-repeat left center;
+    color: #000;
+    border:0;
+}
+input.btn_save
+{
+    background: url(../images/images/form_btn.png) no-repeat;
+    color: #FFF;
+    border:0;
+}
+input.btn_save:hover
+{
+    background: url(../images/images/form_btn_on.png) no-repeat;
+}
+
+
+
+

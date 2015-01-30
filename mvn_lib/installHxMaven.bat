@@ -1,0 +1,1 @@
+mvn org.apache.maven.plugins:maven-install-plugin:2.5.1:install-file  -Dfile=hx-maven-2.0.0.0.jar -DgroupId=com.hxht -DartifactId=hx-maven -Dversion=2.0.0.0 -Dpackaging=jar 

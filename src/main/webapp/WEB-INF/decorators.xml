@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<decorators defaultdir="/WEB-INF/decorators">
+    <excludes>
+        <pattern>/ajax/**</pattern>
+        <pattern>/public/**</pattern>
+        <pattern>/user/**</pattern>
+    </excludes>
+    <decorator name="sampleMain" page="sample/main.jsp">
+        <pattern>/*</pattern>
+    </decorator>
+    <decorator name="pubAndVod" page="court/pubAndVod.jsp">
+		<pattern>/courtPub/**</pattern>
+	</decorator>
+    <decorator name="sampleHeader" page="sample/header.jsp"/>
+    <decorator name="sampleFooter" page="sample/footer.jsp"/>
+    <decorator name="upNaviBar" page="sample/navi.jsp"/>
+    
+    <!--其他装饰声明-->
+    <!--plain装饰器，不含header和footer，只包含必须的include和引用reference文件-->
+    <decorator name="plain" page="plain/main.jsp"/>
+    <!--none装饰器，不做任何装饰处理，需要在meta中指定，<meta name="decorator" content="none"/>
+    	参考：http://www.haogongju.net/art/1602223-->
+    <decorator name="none"/>
+</decorators>  
